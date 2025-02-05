@@ -52,3 +52,6 @@ let surname = prompt('Введіть своє прізвище: ')
 let middlename = prompt('Введіть своє прізвище:')
 let fullname = `${name} ${surname} ${middlename}`
 console.log(fullname);
+
+
+console.log('91'-1)
