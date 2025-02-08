@@ -5,32 +5,32 @@ for (let i = 0; i < 10; i++) {
     const div = `<div>Lorem ipsum dolor sit amet.</div>`
     document.write(div)
 }
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 // #TYj7ncx
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 for (let i = 0; i < 10; i++) {
     document.write(`<div><b>Paragraph ${i+1}:</b> Lorem ipsum dolor sit amet.</div>`)
 }
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 // #uzkt71dp
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 let i = 0
-while(i<10){
+while(i<20){
     document.write(`<h1>lorem</h1>`)
     i++
 }
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 // #OeT7t3uUMFi
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 let j = 0
-while(j<10){
+while(j<20){
     document.write(`<h1>{i+1}lorem</h1>`)
     j++
 }
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 // vLSZKMlO
 // - Використовуючи данні з масиву, за допомоги document.write та циклу
@@ -55,7 +55,7 @@ for (let item of listOfItems) {
     document.write(li)
 }
 document.write(`</ul>`)
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 // #Hdjws7E
 // Використовуючи данні з масиву, за допомоги document.write та циклу
@@ -97,7 +97,7 @@ for (let product of products){
         </div>`
     document.write(template)
 }
-document.write(`--------------------------------------------------------------\n`)
+document.write(`--------------------------------------------------------------`)
 
 //#4WrHwFTEop0
 // є масив
@@ -121,13 +121,15 @@ let users = [
 
 console.log(`Users with 'True' status:`)
 for (let user of users){
-    if (user.status ===  true){
+    // if (user.status ===  true){ //змінив після перегляду розбору дз
+    if (user.status){
         console.log(user.name)
     }
 }
 console.log("Users with 'False' status:")
 for (let user of users){
-    if (user.status === false){
+    // if (user.status === false){ //змінив після перегляду розбору дз
+    if (!user.status){
         console.log(user.name)
     }
 }
