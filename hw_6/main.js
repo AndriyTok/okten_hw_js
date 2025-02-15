@@ -3,7 +3,7 @@
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 
 const strings = ['hello world', 'lorem ipsum', 'javascript is cool']
-strings.forEach(value => console.log(value.length))
+strings.forEach(element => console.log(element.length))
 
 // #8lld9HMxXWB
 // - Перевести до великого регістру наступні стрінгові значення
@@ -23,6 +23,7 @@ console.log(lower_strings);
 // #0b89BkYZwu
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
+// підглянув з розбору
 // const str = ' dirty string   '
 // console.log(str.trim())
 
