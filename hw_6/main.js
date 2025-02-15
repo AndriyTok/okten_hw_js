@@ -48,6 +48,9 @@ console.log(arr);
 
 const array = [10, 8, -7, 55, 987, -1011, 0, 1050, 0]
 const new_str_array = array.map(value => value.toString())
+//з консультації:
+// const strings = numbers.map(number => number + '');
+
 console.log(new_str_array);
 
 // #5hqyKTfmc
@@ -62,6 +65,18 @@ function sortNums(array, direction) {
     }
 
     const sortedArray = array.sort((a, b) => direction === 'asc' ? a - b : b - a)
+
+    //from consultation
+    // function sortNums(arrayOfNums, direction) {
+    //     const sort = arrayOfNums.sort((a, b) => a - b);
+    //     if (direction === 'asc') {
+    //         return sort;
+    //     }
+    //     if (direction === 'desc') {
+    //         return sort.reverse();
+    //
+    //     }
+    //}
 
     console.log(sortedArray)
     return sortedArray
@@ -99,6 +114,13 @@ const mapped_courses = coursesAndDurationArray.map(
     }
 )
 console.log(mapped_courses)
+
+// from_consultation
+
+// const map1 = coursesAndDurationArray
+//     .sort((a, b) => b.monthDuration - a.monthDuration)
+//     .filter(value => value.monthDuration > 5)
+//     .map((value, index) => ({...value, id: index + 1}));
 
 // #bolvdlhP
 // описати колоду карт (від 6 до туза без джокерів)
@@ -142,6 +164,9 @@ console.log(diamond_cards);
 const club_cards = deck.filter(card => card.cardSuit === 'clubs' && (card.value >= 9 ||
     ['ace', 'jack', 'queen', 'king'].includes(card.value)))
 console.log(club_cards);
+
+//from_consultation
+// console.log(cards.filter(card => card.cardSuit === 'club' && (card.value !== '6' || card.value !== '7' || card.value !== '8' || card.value !== '9')));
 
 // #EP5I1UUzAX
 // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
