@@ -66,7 +66,7 @@ function sortNums(array, direction) {
 
     const sortedArray = array.sort((a, b) => direction === 'asc' ? a - b : b - a)
 
-    //from consultation
+    //from task_resolve
     // function sortNums(arrayOfNums, direction) {
     //     const sort = arrayOfNums.sort((a, b) => a - b);
     //     if (direction === 'asc') {
@@ -115,7 +115,7 @@ const mapped_courses = coursesAndDurationArray.map(
 )
 console.log(mapped_courses)
 
-// from_consultation
+// from_task_resolve
 
 // const map1 = coursesAndDurationArray
 //     .sort((a, b) => b.monthDuration - a.monthDuration)
@@ -165,7 +165,7 @@ const club_cards = deck.filter(card => card.cardSuit === 'clubs' && (card.value 
     ['ace', 'jack', 'queen', 'king'].includes(card.value)))
 console.log(club_cards);
 
-//from_consultation
+//from_task_resolve
 // console.log(cards.filter(card => card.cardSuit === 'club' && (card.value !== '6' || card.value !== '7' || card.value !== '8' || card.value !== '9')));
 
 // #EP5I1UUzAX
