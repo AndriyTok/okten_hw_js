@@ -31,7 +31,15 @@ console.log(lower_strings);
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 
 const str = 'Ревуть воли як ясла повні';
-const str_to_array = (string) => string.split(' ')
+const str_to_array = (string) => {
+    if (string) {
+        return string.split(' ')
+    }
+    else{
+        return ''
+    }
+
+}
 const arr = str_to_array(str)
 console.log(arr);
 
