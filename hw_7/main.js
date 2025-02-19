@@ -49,6 +49,8 @@ function Client(id, name, surname, email, phone, order) {
     this.order = order
 }
 
+//in task resolve added separate function constructor for Order
+
 //asked GPT's advice to shorten the construction used for my previous users array
 const client_data = [
     {
@@ -206,31 +208,42 @@ class Car {
     }
 
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-    info() {
-        console.log(`
-            model: ${this.model}
-            producer: ${this.producer}
-            year: ${this.year}
-            max_speed: ${this.max_speed}
-            engine: ${this.engine}
-        `)
+    //my variant
+//     info() {
+//         console.log(`
+//             model: ${this.model}
+//             producer: ${this.producer}
+//             year: ${this.year}
+//             max_speed: ${this.max_speed}
+//             engine: ${this.engine}
+//         `)
+//     }
+    //taken from the task resolve
+    info(){
+        for (const key in this){
+            console.log(key, this[key])
+        }
     }
 
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-    increaseMaxSpeed(newSpeed) {
-        this.max_speed = this.max_speed + newSpeed
+    increaseMaxSpeed(speed_to_add) {
+        if (speed_to_add > 0){
+            this.max_speed = this.max_speed + speed_to_add
+        }
         return this.max_speed
     }
 
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
     changeYear(newValue) {
-        this.year = newValue
+        if (newValue > 1990){
+            this.year = newValue
+        }
         return this.year
     }
 
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
     addDriver(driver) {
-        this.driver = driver
+        if (driver){this.driver = driver}
         return this.driver
     }
 }
@@ -270,7 +283,7 @@ const cinderellas_data = [
     {name: 'Tetiana', age: 17, foot_size: 32.4},
 ]
 
-const cinderellas = cinderellas_data.map(({name, age, foot_size}) => new Cinderella(name, age, foot_size))
+const cinderellas = cinderellas_data.map(({name, age, foot_size})=> new Cinderella(name, age, foot_size))
 console.table(cinderellas)
 
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
