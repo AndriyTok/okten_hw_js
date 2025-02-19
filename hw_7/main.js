@@ -293,15 +293,28 @@ const prince = new Prince('Andrii', 20, 32.4)
 // }
 
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-const found_cinderella = cinderellas.filter(
+const found_cinderella = [...cinderellas].filter(
     cinderella => prince.found_shoe === cinderella.foot_size)
 console.log(found_cinderella);
 
 // #gsKLAsNWM
 // *Через Array.prototype. створити власний foreach, filter
-Array.prototype.myforEach = function(array, callback){
-    for (let i = 0; i < arguments.length; i++) {
-        const argument = arguments[i];
-        //to_be_finished
+Array.prototype.my_forEach = function (callback) {
+    for (let item of this) {
+        callback(item)
     }
 }
+cinderellas.my_forEach(value=>console.log(value))
+
+Array.prototype.my_filter = function(callback){
+    const arr = []
+    for (let item of this){
+        if (callback(item)){
+            arr.push(item)
+        }
+    }
+    return arr
+}
+
+const filtered_cinderellas = cinderellas.my_filter(value => value.foot_size === 31)
+console.log(filtered_cinderellas);
