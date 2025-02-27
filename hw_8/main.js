@@ -54,6 +54,6 @@ const coursesAndDurationArray = [
 //     Зробити все ВИКЛЮЧНО за допомоги інлайн конструкції
 
 const new_courses_array = coursesAndDurationArray.map(({title,monthDuration}, index) =>
-    ({id: index, title, monthDuration})
+    ({id: index+1, title, monthDuration})
 )
 console.log(new_courses_array);
