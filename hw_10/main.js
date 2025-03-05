@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const p_id = document.getElementById("text");
     const button1 = document.getElementById('b1');
 
-    button1.addEventListener("click", function (ev) {
+    button1.addEventListener("click", function () {
         if (p_id.style.visibility === "hidden") {
             p_id.style.visibility = "visible";
         } else {
@@ -103,8 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formatted_weight_p = document.getElementById('formatted_weight');
 
     weight_input.addEventListener('input', function () {
-        const formatted_weight =
-            formatted_weight_p.innerText = `Weight in lb: ${parseFloat(weight_input.value) * 2.20462}`;
+        formatted_weight_p.innerText = `Weight in lb: ${parseFloat(weight_input.value) * 2.20462}`;
     })
 
 // #RbQGnH5DuC
