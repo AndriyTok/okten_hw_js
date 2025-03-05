@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('number', JSON.stringify(number));
 
     }
+    else{
+        let number = parseInt(localStorage.getItem('number')) || 100;
+        number_div.innerHTML = `${JSON.stringify(number)}грн`;
+        localStorage.setItem('number', JSON.stringify(number));
+    }
 })
 
 
